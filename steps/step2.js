@@ -4,7 +4,7 @@ var source = require('vinyl-source-stream');
 
 gulp.task('jsBrowserify', function() {
   return browserify({ entries: ['./src/js/object-interface.js']})
-  .bundle()
-  .pipe(source('app.js'))
-  .pipe(gulp.dest('./dist/js'));
+    .bundle()
+    .pipe(source('app.js'))
+    .pipe(gulp.dest('./dist/js'));
 });
