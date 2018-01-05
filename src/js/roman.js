@@ -14,7 +14,7 @@ export class RomanNumerals {
     let convertedArray = [];
     for (var i = 0; i < numArray.length; i++) {
       const position = this.positions[i];
-      convertedArray.unshift(position[numArray[numArray.length - i]]);
+      convertedArray.unshift(position[numArray[numArray.length - (i + 1)]]);
     }
     return convertedArray.join("");
   }

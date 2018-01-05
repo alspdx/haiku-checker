@@ -4,9 +4,9 @@ import { RomanNumerals } from './../src/js/roman.js';
 $(function() {
   $("#convert-input").submit(function(event) {
     event.preventDefault();
-    var numeralizeIt = new RomanNumerals();
-    var userInput = $("#number-input").val();
-    var output = numeralizeIt.numberCruncher(userInput);
+    const numeralizeIt = new RomanNumerals();
+    const userInput = $("#number-input").val();
+    const output = numeralizeIt.numberCruncher(userInput);
     $("#numeral-output").text(output);
   });
 });

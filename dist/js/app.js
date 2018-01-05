@@ -27,7 +27,7 @@ var RomanNumerals = exports.RomanNumerals = function () {
       var convertedArray = [];
       for (var i = 0; i < numArray.length; i++) {
         var position = this.positions[i];
-        convertedArray.unshift(position[numArray[numArray.length - i]]);
+        convertedArray.unshift(position[numArray[numArray.length - (i + 1)]]);
       }
       return convertedArray.join("");
     }
