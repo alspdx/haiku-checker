@@ -11,13 +11,13 @@ var lib = require('bower-files')();
 var browserSync = require('browser-sync').create();
 
 gulp.task('concatInterface', function() {
-  return gulp.src(['./js/*-interface.js'])
+  return gulp.src(['./src/js/*-interface.js'])
     .pipe(concat('allConcat.js'))
     .pipe(gulp.dest('./tmp'));
 });
 
 gulp.task('jsBrowserify', ['concatInterface'], function() {
-  return browserify({ entries: ['.tmp/allConcat.js']})
+  return browserify({ entries: ['./tmp/allConcat.js']})
     .bundle()
     .pipe(source('app.js'))
     .pipe(gulp.dest('./dist/js'));
